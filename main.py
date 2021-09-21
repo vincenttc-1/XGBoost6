@@ -21,7 +21,7 @@ import json
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory, StopWordRemover, ArrayDictionary
 import re
-from string import string
+import string
 from flask_cors import CORS
 from flask import Flask,jsonify,request,render_template
 
@@ -36,9 +36,9 @@ df2['title'] = ['Malaysia Sudutkan RI: Isu Kabut Asap hingga Invasi Babi']
 
 def text_preproc(x):
   #case folding
-  #x = x.lower()
+  string.x = x.lower()
   #remove double space
-  #x = re.sub(r'\s{2,}', ' ', x)
+  x = re.sub(r'\s{2,}', ' ', x)
   return x
 
 df2['Judul Berita (Bersih)'] = df2['title'].apply(text_preproc)
