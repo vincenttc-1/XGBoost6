@@ -21,7 +21,7 @@ import json
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory, StopWordRemover, ArrayDictionary
 import re
-import string
+from string import string
 from flask_cors import CORS
 from flask import Flask,jsonify,request,render_template
 
